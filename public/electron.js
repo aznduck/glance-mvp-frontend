@@ -9,6 +9,8 @@ function createWindow() {
   const mainWindow = new BrowserWindow({
     width: 1920,
     height: 1080,
+    minWidth: 1000,
+    minHeight: 567,
     webPreferences: {
       nodeIntegration: false, // Security: Disable Node.js integration in renderer
       contextIsolation: true, // Security: Enable context isolation
