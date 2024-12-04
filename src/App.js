@@ -112,14 +112,16 @@ function App() {
       </div>
       <div className="mt-4 flex-[3_3_0%] flex gap-4">
         <div className="flex-1 h-full">
-          <div className="w-full h-full overflow-y-scroll bg-zinc-900 rounded-lg border-2 border-[#414344]">
-            <div className="p-8 pb-4">
+          <div className="w-full  h-[calc(50vh)] flex flex-col bg-zinc-900 rounded-lg border-2 border-[#414344]">
+            {/* fixed header */}
+            <div className="p-8 pb-4 flex-shrink-0">
               <div className="flex justify-between items-center">
                 <h2 className="text-xl font-medium">Your Progress</h2>
                 <TimeFilterDropdown />
               </div>
             </div>
-            <div className="min-h-0 p-8 pt-2">
+            {/*scrollable context */}
+            <div className="flex-1 scrollbar-hide overflow-y-auto p-8 pt-2">
               <div className="flex flex-col gap-6">
                 <ProgressItem
                   date="10 Nov, 2024"
@@ -146,14 +148,18 @@ function App() {
           </div>
         </div>
         <div className="flex-1">
-          <div className="w-full h-full overflow-y-auto bg-zinc-900 rounded-lg border-2 border-[#414344]">
-            <div className="p-8 pb-4">
+          {/*Team Progress*/}
+          <div className="w-full  h-[calc(50vh)] flex flex-col bg-zinc-900 rounded-lg border-2 border-[#414344]">
+            {/* Fixed Header */}
+            <div className="p-8 pb-4 flex-shrink-0">
               <div className="flex justify-between items-center">
                 <h2 className="text-xl font-medium">Team Progress</h2>
                 <TimeFilterDropdown />
               </div>
             </div>
-            <div className="min-h-0 p-8 pt-2">
+
+            {/* Scrollable Content */}
+            <div className="flex-1 scrollbar-hide overflow-y-auto p-8 pt-2">
               <div className="flex flex-col gap-4">
                 <p className="leading-7 text-base text-zinc-300">
                   This week's focus was on{" "}
@@ -199,8 +205,8 @@ function App() {
       <div className="flex gap-4 bg-black text-white h-screen w-screen overflow-hidden font-inter p-4">
         {/* Left Nav */}
         <div className="flex flex-col">
-          <Link to={"/" || "#"} className="focus:outline-none h-20">
-            <div className="flex items-center ml-4 mr-[130px] select-none">
+          <Link to={"/" || "#"} className="focus:outline-none !h-20">
+            <div className="flex items-center mt-2 ml-6 mr-[130px] select-none">
               <img src={glanceLogo} className="h-9 w-7 mr-3" alt="Logo" />
               <h1 className="font-custom text-3xl">glance</h1>
             </div>
@@ -209,7 +215,7 @@ function App() {
           <TeamSelector />
 
           {/* Navigation Items */}
-          <nav className="space-y-1">
+          <nav className="space-y-1 h-[calc(100vh-200px)] overflow-y-auto scrollbar-hide">
             {/*line before documentation*/}
             <div className="h-[1px] bg-[#1e1e1e] my-2"></div>
             {navItems.map((item, index) => (

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Dialog, DialogContent } from "./components/ui/dialog";
-import { X } from "lucide-react";
 
 export default function VisualProgressUpdate({
   userName = "Daniel Gao",
@@ -12,32 +11,35 @@ export default function VisualProgressUpdate({
   const [isImageExpanded, setIsImageExpanded] = useState(false);
 
   return (
-    <div className="border-0 overflow-hidden rounded-lg mx-2 w-fit">
-      <div className="p-4 space-y-4">
-        {/* User Info and Title */}
-        <div className="flex flex-col space-y-2">
-          <div className="flex items-center gap-4">
-            {/* Profile Section */}
-            <div className="flex flex-shrink-0">
-              <img
-                src={userAvatar}
-                alt={userName}
-                className="w-12 h-12 rounded-full"
-              />
-            </div>
+    <>
+      <div className="border-0 overflow-hidden rounded-lg mx-2 w-fit">
+        <div className="p-4 space-y-4">
+          {/* User Info and Title */}
+          <div className="flex flex-col space-y-2">
+            <div className="flex items-center gap-4">
+              {/* Profile Section */}
+              <div className="flex flex-shrink-0">
+                <img
+                  src={userAvatar}
+                  alt={userName}
+                  className="w-12 h-12 rounded-full"
+                />
+              </div>
 
-            {/* Name and Description */}
-            <div className="flex flex-col">
-              <span className="text-md font-medium text-white">{userName}</span>
-              <div className="flex items-center gap-2 mt-1">
-                <div className="bg-emerald-500/10 text-[8px] text-emerald-500 border-2 border-emerald-500 hover:bg-emerald-500/20 rounded-md py-0.75 px-1">
-                  Progress Update
+              {/* Name and Description */}
+              <div className="flex flex-col">
+                <span className="text-md font-medium text-white">
+                  {userName}
+                </span>
+                <div className="flex items-center gap-2 mt-1">
+                  <div className="bg-emerald-500/10 text-[8px] text-emerald-500 border-2 border-emerald-500 hover:bg-emerald-500/20 rounded-md py-0.75 px-1">
+                    Progress Update
+                  </div>
+                  <span className="text-xs text-white">{title}</span>
                 </div>
-                <span className="text-xs text-white">{title}</span>
               </div>
             </div>
           </div>
-        </div>
 
           {/* Screenshot */}
           <div
@@ -52,7 +54,6 @@ export default function VisualProgressUpdate({
           </div>
         </div>
       </div>
-
       <Dialog open={isImageExpanded} onOpenChange={setIsImageExpanded}>
         <DialogContent className="max-w-[95vw] lg:max-w-[1200px] p-6 bg-zinc-900 border border-zinc-800">
           <div className="space-y-4">
@@ -62,9 +63,7 @@ export default function VisualProgressUpdate({
               <button
                 onClick={() => setIsImageExpanded(false)}
                 className="p-2 rounded-full hover:bg-zinc-800 transition-colors"
-              >
-                <X className="h-5 w-5" />
-              </button>
+              ></button>
             </div>
 
             {/* Image */}
