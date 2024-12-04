@@ -162,22 +162,22 @@ function App() {
                   </span>{" "}
                   essential for the game's development.
                   <span className="bg-green-800 text-white px-1 mx-1 rounded">
-                    High-resolution character and weapon models were finalized, with
-                    textures and animations prepared for integration into the game
-                    engine.
+                    High-resolution character and weapon models were finalized,
+                    with textures and animations prepared for integration into
+                    the game engine.
                   </span>
-                  Environment assets, including terrain features and foliage, were
-                  optimized to enhance the open-world experience while maintaining
-                  performance.
+                  Environment assets, including terrain features and foliage,
+                  were optimized to enhance the open-world experience while
+                  maintaining performance.
                   <span className="bg-yellow-800 text-white px-1 mx-1 rounded">
-                    Key gameplay systems, such as crafting and inventory mechanics,
-                    underwent significant updates to improve player interaction and
-                    functionality.
+                    Key gameplay systems, such as crafting and inventory
+                    mechanics, underwent significant updates to improve player
+                    interaction and functionality.
                   </span>
                   <span className="bg-blue-800 text-white px-1 mx-1 rounded">
-                    Technical adjustments resolved critical bugs, ensuring smoother
-                    terrain generation and stabilizing NPC behavior for better
-                    immersion.
+                    Technical adjustments resolved critical bugs, ensuring
+                    smoother terrain generation and stabilizing NPC behavior for
+                    better immersion.
                   </span>
                   These achievements lay a solid foundation as the project
                   progresses toward the{" "}
